@@ -1,0 +1,73 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19420\viewh12180\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf2 README
+\f1\b0 \
+	Codes for agro-ecological regions in Sri Lanka: Ampara (DZ), Kurunegala (IZ), and Ratnapura (WZ).\
+\
+\
+
+\f0\b SCRIPTS
+\f1\b0 \
+  	The location is selected at the top of each script with location = 'ampara' / 'kuru' / 'rath' (switch case).\
+\
+
+\f0\b CODE_MCMC_and_BSI.m
+\f1\b0 \
+	Parameter estimation of the D-vine copula (DRAM) and BSI vs SSI index construction.\
+      	Contains the functions marginals and Loglikelihood_location at the end of the file.\
+\
+
+\f0\b CODE_ContourPlots.m
+\f1\b0 \
+      	Contour plots of the fitted copula densities on the original scale: soil moisture vs temperature (XT), rainfall vs temperature (RT) and soil moisture vs rainfall (RX).\
+\
+
+\f0\b CODE_Forecasting.m
+\f1\b0 \
+      	SARIMA forecasting of rainfall, temperature and soil moisture: 1-month-ahead forecasts on the test period and forecasts for 2026. \
+\
+\
+
+\f0\b DATA FILES (.mat)
+\f1\b0 \
+	Ampara\
+      		rainfall_series_ampara.mat		rainfall (R)\
+      		temp_series_ampara.mat       		temperature (T)\
+      		sm_series_ampara.mat         		soil moisture (X)\
+	\
+	Kurunegala\
+      		rainfall_series_kuru.mat    		rainfall (R)\
+      		temp_series_kuru.mat         		temperature (T)\
+     	 	sm_series_kuru.mat           		soil moisture (X)\
+\
+	Ratnapura\
+      		rainfall_series_rath.mat     		rainfall (R)\
+      		temp_series_rath.mat         		temperature (T)\
+      		sm_series_rath.mat           		soil moisture (X)\
+\
+\
+  	Posterior chains (after burn-in)\
+     		 chain_post_ampara.mat\
+      		chain_post_kuru.mat\
+      		chain_post_rath.mat\
+    \
+\
+
+\f0\b FUNCTIONS
+\f1\b0 \
+	bb7Density.m       BB7 copula density\
+  	bb7PartialV.m      BB7 h-function (conditional distribution)\
+  	figSettings.m       figure formatting\
+\
+\
+
+\f0\b MCMC TOOLBOX
+\f1\b0 \
+	mcmc toolbox \
+\
+}
